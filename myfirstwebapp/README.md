@@ -27,3 +27,6 @@
 
 - @Entity, @Id, @GeneratedValue, @Column
 - JpaRepository
+
+- com.h2database
+- com.mysql
