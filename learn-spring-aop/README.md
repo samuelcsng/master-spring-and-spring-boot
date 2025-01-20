@@ -53,4 +53,55 @@ public void run(String... args) throws Exception {
   - logger.info()
 - @Component, @Service
 - @Repository
-- 
+
+# 219 Step 05
+- AOP Logging Aspect and Pointcut
+- @Configuration
+- @Aspect
+- Logger, LoggerFactory.getLogger()
+- @Pointcut(), @Before()
+- JoinPoint
+- @Before
+
+# 220 Step 06
+- AOP Terminology
+- Compile Time
+  - Advice
+  - Pointcut
+  - Aspect (combination of)
+    - Advice
+    - Pointcut
+  - Weaver
+    - AspectJ or Spring AOP
+- Runtime
+  - Join Point
+
+# 221 Step 07
+- @After(pointcut)
+- @AfterReturning(pointcut, returning)
+- @AfterThrowing(pointcut, throwing)
+
+# 222 Step 08
+- @Around(pointcut)
+- ProceedingJoinPoint, ProceedingJoinPoint.proceed()
+- Thread.sleep()
+- Logger.info()
+
+# 223 Step 09
+- AOP Best Practice
+- @Pointcut("execution(...)")
+- @Pointcut("bean(...)")
+
+# 224 Step 10
+- self-build custom Annotation
+  ```java
+  @Target(ElementType.METHOD)
+  @Retention(RetentionPolicy.RUNTIME)
+  public @interface TrackTime {
+  }
+  ```
+- @Pointcut("@annotation(...)")
+- @Around("...")
+- @TrackTime
+
+# 225 Step 11
